@@ -304,7 +304,9 @@ var metricView = function(dataView) {
 
   var plotAccuracy = function() {
     var i = Math.min(d3.bisectLeft(xp, thresh), xp.length - 1)
-    drawPlot(xp, accuracy, xp[i], accuracy[i], "Threshold", "Accuracy")
+    var xpAug = d3.merge([[0], xp])
+    var accuracyAug = d3.merge([[accuracy[0]], accuracy])
+    drawPlot(xpAug, accuracyAug, xp[i], accuracy[i], "Threshold", "Accuracy")
   }
 
   var plotPrecision = function() {
