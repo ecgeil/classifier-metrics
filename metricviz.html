@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>D3 Test</title>
+        <link rel="stylesheet" type="text/css" href="metricviz.css" media="screen" />
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div id="data-view-div", width="500", height="300", style="float:left">
+            <svg id="data-view", width="500", height="300"></svg>
+        </div>
+        <div id="metric-view-div", width="500", height="300", style="float:left">
+            <svg id="metric-view", width="500", height="300"></svg>
+        </div>
+        <br style = "clear:both">
+        <div id="posfrac-div" class="input">
+            <input id="posfrac" type="range" min="0.00" max="1.0" step="0.01" value="0.5">
+            <label for="posfrac" class="formlabel">Positive fraction:</label>
+        </div>
+        <div id="spread-div" class="input">
+            <input id="spread" type="range" min="0.50" max="1.0" step="0.01" value="0.6">
+            <label for="spread" class="formlabel">Overlap:</label>
+        </div>
+        <div id="metric-menu-div" class="input">
+           <select id="metric-menu">
+              <option value="accuracy">Accuracy</option>
+              <option value="precision">Precision</option>
+              <option value="recall">Recall</option>
+              <option value="roc">ROC</option>
+              <option value="precision-recall">Precision-Recall</option>
+              <option value="tpr">TPR</option>
+              <option value="fpr">FPR</option>
+           </select>
+           <label for="metric-menu" class="formlabel">Plot type:</label>
+        </div>
+    </body>
+    <script type="text/javascript" src="metricviz.js"></script>
+</html>   

@@ -1,0 +1,30 @@
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 3.0px;
+}
+
+.area {
+    fill: lightsteelblue;
+    stroke-width: 0;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.input {
+	position:relative;
+	left:70px;
+	width:400px;
+	padding-top:10px;
+}
+
+label.formlabel {
+	text-align:left;
+	float:left;
+	width:120px;
+}
